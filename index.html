@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FC GUĽKO</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#160b29;color:white;
+ font-family:Arial,sans-serif;text-align:center
+}
+header{
+ padding:35px 15px;
+ background:linear-gradient(120deg,#7026c9,#2678e8)
+}
+h1{font-size:38px;margin:5px}
+nav{display:flex;justify-content:center;flex-wrap:wrap;
+ gap:8px;padding:15px;background:#281642}
+button{background:#7026c9;color:white;border:0;
+ padding:12px 17px;border-radius:12px;font-weight:bold}
+.card{background:#30204c;border-radius:20px;
+ padding:24px;margin:20px auto;max-width:500px}
+section{display:none;padding:15px}
+section.active{display:block}
+.teams{display:flex;justify-content:space-around;
+ align-items:center;gap:10px;font-weight:bold}
+.teams div{flex:1}
+.vs{font-size:28px;color:#b99aff}
+.arena{color:#b99aff;font-size:25px}
+footer{padding:25px;color:#cbb6ed}
+</style>
+</head>
+<body>
+<header>
+<h1>⚽ FC GUĽKO</h1>
+<p>ONE CLUB. ONE FAMILY.</p>
+</header>
+<nav>
+<button onclick="page('home')">Domov</button>
+<button onclick="page('matches')">Zápasy</button>
+<button onclick="page('team')">Tím</button>
+<button onclick="page('news')">Novinky</button>
+</nav>
+<section id="home" class="active">
+<h2>VITAJ V FC GUĽKO!</h2>
+<div class="card">
+<h2>🏆 NAJBLIŽŠÍ ZÁPAS</h2>
+<div class="teams">
+<div>💜<br>FC GUĽKO</div>
+<div class="vs">VS</div>
+<div>🔺<br>FC TROJUHOLNÍK PREŠOV</div>
+</div>
+<h2 class="arena">🏟️ GUĽ ARENA</h2>
+<p>Domáci štadión FC Guľko</p>
+<p>Dátum: Bude doplnený</p>
+</div>
+</section>
+<section id="matches">
+<h2>⚽ ZÁPASY</h2>
+<div class="card">
+FC GUĽKO vs FC TROJUHOLNÍK PREŠOV
+<h2 class="arena">GUĽ ARENA</h2>
+</div>
+</section>
+<section id="team">
+<h2>👥 NÁŠ TÍM</h2>
+<div class="card">
+<p>🧤 Brankári</p>
+<p>🛡️ Obrancovia</p>
+<p>⚽ Záložníci</p>
+<p>🔥 Útočníci</p>
+</div>
+</section>
+<section id="news">
+<h2>📰 NOVINKY</h2>
+<div class="card">
+<h3>FC GUĽKO</h3>
+<p>Vitaj na oficiálnej stránke klubu!</p>
+</div>
+</section>
+<footer>
+FC GUĽKO © 2026<br>
+💜 FIALOVÁ • 🤍 BIELA • 💙 MODRÁ
+</footer>
+<script>
+function page(id){
+ document.querySelectorAll('section')
+ .forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
